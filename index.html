@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>AIVD Model Shortlist</title>
+<meta name="description" content="Top text, image, video, audio and 3D models with price, generation time and best use.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F3F4F1; --surface:#FFFFFF; --ink:#17191C; --muted:#5C635F; --rule:#DDE0DA; --accent:#3B4CCA; --accent-soft:#E6E8FA;
+  --fast:#1F7A4D; --fast-bg:#E1F1E8; --med:#8A5A00; --med-bg:#F6ECD6; --slow:#9B2C3A; --slow-bg:#F7E2E5;
+  --display:"Archivo",system-ui,sans-serif; --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#121416; --surface:#1A1D20; --ink:#ECEDEA; --muted:#9AA19C; --rule:#2B3034; --accent:#9AA5FF; --accent-soft:#23284A;
+    --fast:#7FD3A6; --fast-bg:#16301F; --med:#E8C27A; --med-bg:#33280F; --slow:#F09AA6; --slow-bg:#3A1A20;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--body);margin:0;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:20px;padding-block:40px 64px}
+.eyebrow{font:500 12px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{font:800 clamp(32px,5vw,48px)/1.05 var(--display);letter-spacing:-.02em;margin:10px 0 12px;text-wrap:balance}
+.lede{max-width:64ch;color:var(--muted);margin:0}
+.lede b{color:var(--ink);font-weight:600}
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:16px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:12px;margin-top:28px;border-bottom:1px solid var(--rule);display:flex;gap:8px;flex-wrap:wrap}
+nav a{font:500 13px/1 var(--mono);color:var(--ink);text-decoration:none;padding:8px 12px;border:1px solid var(--rule);border-radius:999px;background:var(--surface)}
+nav a:hover,nav a:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+h2{font:600 13px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px;display:flex;align-items:baseline;gap:10px}
+h2 .unit{font:400 12px/1 var(--body);letter-spacing:0;text-transform:none}
+.start{margin-top:28px}
+.picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.pick{background:var(--accent-soft);border-radius:10px;padding:14px}
+.pick .k{font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.pick .m{font:600 16px/1.25 var(--display);margin-top:8px}
+.pick .w{font-size:13px;color:var(--muted);margin-top:4px}
+.rule{margin:12px 0 0;font-size:14px;color:var(--muted)}
+.rule b{color:var(--ink)}
+section{margin-top:44px;scroll-margin-top:72px}
+.tbl{overflow-x:auto;background:var(--surface);border:1px solid var(--rule);border-radius:12px}
+table{width:100%;border-collapse:collapse}
+th{font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:12px 16px;border-bottom:1px solid var(--rule)}
+td{padding:14px 16px;border-bottom:1px solid var(--rule);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.model{font-weight:600;white-space:nowrap}
+td.model small{display:block;font-weight:400;color:var(--muted);font-size:12px;white-space:normal}
+td.price{font:500 14px/1.35 var(--mono);white-space:nowrap;font-variant-numeric:tabular-nums}
+td.price small{display:block;font:400 11px/1.3 var(--mono);color:var(--muted);white-space:normal;max-width:14ch}
+td.refs{font:400 13px/1.35 var(--mono);color:var(--muted);min-width:150px}
+td.best{min-width:240px}
+td.best .not{display:block;color:var(--muted);font-size:13px;margin-top:2px}
+.chip{display:inline-block;font:500 12px/1 var(--mono);padding:5px 8px;border-radius:6px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.fast{color:var(--fast);background:var(--fast-bg)}
+.med{color:var(--med);background:var(--med-bg)}
+.slow{color:var(--slow);background:var(--slow-bg)}
+.note{font-size:13px;color:var(--muted);margin-top:10px;max-width:72ch}
+.skip{background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:6px 16px}
+.skip div{display:grid;grid-template-columns:minmax(150px,220px) 1fr;gap:4px 16px;padding:10px 0;border-bottom:1px solid var(--rule)}
+.skip div:last-child{border-bottom:0}
+.skip b{font-weight:600}
+.skip span{color:var(--muted)}
+footer{margin-top:44px;font-size:13px;color:var(--muted)}
+details summary{cursor:pointer;font:500 13px/1.4 var(--mono);color:var(--ink)}
+details ul{padding-left:18px;margin:10px 0 0}
+details li{margin:4px 0}
+footer a{color:var(--accent)}
+.err{background:var(--slow-bg);color:var(--slow);padding:12px 16px;border-radius:10px;margin-top:20px}
+@media (max-width:640px){
+  .wrap{padding-block:28px 48px}
+  table,thead,tbody,tr,td{display:block}
+  thead{display:none}
+  tr{padding:12px 16px;border-bottom:1px solid var(--rule)}
+  tr:last-child{border-bottom:0}
+  td{border:0;padding:3px 0}
+  td.model{white-space:normal;font-size:16px}
+  td.price,td.time{display:inline-block;margin-right:10px;vertical-align:top}
+  td.best{min-width:0}
+  td.refs{min-width:0;margin-top:2px}
+  td.refs::before{content:"Refs: "}
+  .skip div{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow" id="eyebrow">AI For Visual Design · Model shortlist</div>
+    <h1>Which model should I use?</h1>
+    <p class="lede">The top picks per modality, based on the latest public leaderboards, vendor docs and creator reviews. <b>Price</b> is what one generation costs in FLORA at default settings. <b>Time</b> is FLORA's in-app estimate; queues vary.</p>
+    <div class="legend">
+      <span class="chip fast">Fast · 30s or less</span>
+      <span class="chip med">Medium · 30s to 2 min</span>
+      <span class="chip slow">Slow · over 2 min</span>
+    </div>
+  </header>
+  <nav id="nav" aria-label="Jump to section"></nav>
+  <div id="app"></div>
+</div>
+
+<script src="data.js"></script>
+<script>
+(function () {
+  var S = window.SHEET;
+  var app = document.getElementById('app');
+  if (!S) { app.innerHTML = '<p class="err">data.js failed to load. Check it for a typo (a missing comma or quote).</p>'; return; }
+
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function speed(secs) { return secs <= 30 ? 'fast' : secs <= 120 ? 'med' : 'slow'; }
+  function fmt(secs) { return secs < 90 ? '~' + secs + 's' : '~' + Math.round(secs / 60) + ' min'; }
+
+  document.getElementById('eyebrow').textContent = 'AI For Visual Design · Model shortlist · Updated ' + S.updated;
+
+  var nav = S.sections.map(function (s) { return '<a href="#' + esc(s.id) + '">' + esc(s.name) + '</a>'; });
+  if (S.skip && S.skip.length) nav.push('<a href="#skip">Skip these</a>');
+  document.getElementById('nav').innerHTML = nav.join('');
+
+  var html = '';
+  html += '<div class="start"><h2>If you remember one per modality</h2><div class="picks">' +
+    S.picks.map(function (p) {
+      return '<div class="pick"><div class="k">' + esc(p.k) + '</div><div class="m">' + esc(p.m) + '</div><div class="w">' + esc(p.w) + '</div></div>';
+    }).join('') +
+    '</div><p class="rule"><b>Rule of thumb:</b> explore on the cheap, fast pick. Switch to the best pick only for the version you\'ll keep.</p></div>';
+
+  S.sections.forEach(function (s) {
+    var hasRefs = s.rows.some(function (r) { return r.refs; });
+    html += '<section id="' + esc(s.id) + '"><h2>' + esc(s.name) + ' <span class="unit">' + esc(s.unit) + '</span></h2>' +
+      '<div class="tbl"><table><thead><tr><th>Model</th><th>Price</th><th>Time</th>' + (hasRefs ? '<th>Refs</th>' : '') + '<th>Best for</th></tr></thead><tbody>' +
+      s.rows.map(function (r) {
+        return '<tr>' +
+          '<td class="model">' + esc(r.model) + (r.tag ? '<small>' + esc(r.tag) + '</small>' : '') + '</td>' +
+          '<td class="price">' + esc(r.price) + (r.priceNote ? '<small>' + esc(r.priceNote) + '</small>' : '') + '</td>' +
+          '<td class="time"><span class="chip ' + speed(r.secs) + '">' + fmt(r.secs) + '</span></td>' +
+          (hasRefs ? '<td class="refs">' + esc(r.refs || '') + '</td>' : '') +
+          '<td class="best">' + esc(r.best) + (r.not ? '<span class="not">' + esc(r.not) + '</span>' : '') + '</td>' +
+          '</tr>';
+      }).join('') +
+      '</tbody></table></div>' + (s.note ? '<p class="note">' + esc(s.note) + '</p>' : '') + '</section>';
+  });
+
+  if (S.skip && S.skip.length) {
+    html += '<section id="skip"><h2>Skip these</h2><div class="skip">' +
+      S.skip.map(function (x) { return '<div><b>' + esc(x.name) + '</b><span>' + esc(x.why) + '</span></div>'; }).join('') +
+      '</div></section>';
+  }
+
+  if (S.sources && S.sources.length) {
+    html += '<footer><details><summary>Sources (checked ' + esc(S.updated) + ')</summary><ul>' +
+      S.sources.map(function (x) { return '<li><a href="' + esc(x.url) + '" target="_blank" rel="noopener">' + esc(x.label) + '</a></li>'; }).join('') +
+      '<li>Prices and times: FLORA in-app estimates at default settings</li></ul></details></footer>';
+  }
+
+  app.innerHTML = html;
+})();
+</script>
+</body>
+</html>
