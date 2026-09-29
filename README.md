@@ -1,19 +1,19 @@
-# AIVD Model Shortlist
+# Model Shortlist
 
-A one-page model cheat sheet for AI For Visual Design students.
+A one-page cheat sheet of the top models per modality, with price, generation time and best use.
 
 - `index.html`: layout and styling. You shouldn't need to touch it.
-- `data.js`: every model, price, time and note. **This is the only file you edit.**
+- `data.js`: the page title, every model, price, time and note. **This is the only file you edit.**
 - `robots.txt` + a `noindex` tag keep the page out of Google. Only people with the link find it.
 
 ## Deploy once (about 5 minutes)
 
 Use your **personal** GitHub and Vercel accounts, not a company team.
 
-1. On github.com, create a new **private** repo, e.g. `aivd-models`.
+1. On github.com, create a new **private** repo, e.g. `model-shortlist`.
 2. Click **Add file > Upload files**, drag in all four files, and click **Commit changes**.
-3. On vercel.com, sign in with GitHub, click **Add New > Project**, pick `aivd-models`, leave the preset as **Other**, and click **Deploy**.
-4. Share the `*.vercel.app` link with students. You can rename it under **Settings > Domains**.
+3. On vercel.com, sign in with GitHub, click **Add New > Project**, pick `model-shortlist`, leave the preset as **Other**, and click **Deploy**.
+4. Share the `*.vercel.app` link. You can rename it under **Settings > Domains**.
 
 ## Update anytime
 

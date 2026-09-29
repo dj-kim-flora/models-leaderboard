@@ -1,12 +1,14 @@
 // ============================================================
-// AIVD MODEL SHORTLIST: the only file you need to edit.
+// MODEL SHORTLIST: the only file you need to edit.
 // Change a row, save, commit. Vercel redeploys automatically.
 //   secs  = generation time in seconds (sets the Fast/Medium/Slow chip)
 //   price = what one generation costs in FLORA at default settings
 //   refs  = how many reference inputs the model accepts
+//   title = page title and eyebrow label
 //   not   = optional muted line under "Best for"
 // ============================================================
 window.SHEET = {
+  title: "Model Shortlist",
   updated: "Sep 25, 2026",
 
   picks: [

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<title>AIVD Model Shortlist</title>
+<title>Model Shortlist</title>
 <meta name="description" content="Top text, image, video, audio and 3D models with price, generation time and best use.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -91,7 +91,7 @@ footer a{color:var(--accent)}
 <body>
 <div class="wrap">
   <header>
-    <div class="eyebrow" id="eyebrow">AI For Visual Design · Model shortlist</div>
+    <div class="eyebrow" id="eyebrow">Model shortlist</div>
     <h1>Which model should I use?</h1>
     <p class="lede">The top picks per modality, based on the latest public leaderboards, vendor docs and creator reviews. <b>Price</b> is what one generation costs in FLORA at default settings. <b>Time</b> is FLORA's in-app estimate; queues vary.</p>
     <div class="legend">
@@ -115,7 +115,9 @@ footer a{color:var(--accent)}
   function speed(secs) { return secs <= 30 ? 'fast' : secs <= 120 ? 'med' : 'slow'; }
   function fmt(secs) { return secs < 90 ? '~' + secs + 's' : '~' + Math.round(secs / 60) + ' min'; }
 
-  document.getElementById('eyebrow').textContent = 'AI For Visual Design · Model shortlist · Updated ' + S.updated;
+  var title = S.title || 'Model Shortlist';
+  document.title = title;
+  document.getElementById('eyebrow').textContent = title + ' · Updated ' + S.updated;
 
   var nav = S.sections.map(function (s) { return '<a href="#' + esc(s.id) + '">' + esc(s.name) + '</a>'; });
   if (S.skip && S.skip.length) nav.push('<a href="#skip">Skip these</a>');
