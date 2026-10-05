@@ -9,13 +9,13 @@
 // ============================================================
 window.SHEET = {
   title: "Model Shortlist",
-  updated: "Sep 25, 2026",
+  updated: "Oct 5, 2026",
 
   picks: [
     { k: "Text",  m: "Claude Opus 5",       w: "Prompts, shot lists, ideas" },
     { k: "Image", m: "GPT Image 2.5 Flare", w: "Best all-rounder" },
     { k: "Video", m: "Seedance 2.0",        w: "Cinematic motion" },
-    { k: "Audio", m: "ElevenLabs v3",       w: "Voiceover with emotion" },
+    { k: "Audio", m: "Eleven v4",           w: "Voiceover with emotion" },
     { k: "3D",    m: "Tripo H3.1",          w: "Cleanest models" },
   ],
 
@@ -25,6 +25,7 @@ window.SHEET = {
       rows: [
         { model: "Claude Opus 5", price: "<$0.01", secs: 25, best: "Writing and expanding prompts, shot lists, creative ideation and copy" },
         { model: "GPT-6 Astra", price: "$0.06", secs: 30, best: "Reading images precisely: small details, text in images, turning a reference into a prompt", not: "Not for video: images and text only" },
+        { model: "GPT-6.1 Sol", price: "$0.01", secs: 20, best: "Agentic coding and computer use; near GPT-6 Astra quality at a fraction of the cost" },
         { model: "Gemini Flash 3.8", price: "$0.04", secs: 6, best: "Analyzing video and audio (it watches and listens directly). Fast all-rounder" },
         { model: "Gemini 3.5 Flash-Lite", price: "<$0.01", secs: 4, best: "Bulk jobs: quick rewrites, captions, prompt variations" },
         { model: "Claude Fable 5.1", tag: "Premium", price: "$0.72", secs: 25, best: "Best raw writing and deepest image critique. Use when Opus 5 isn't enough" },
@@ -60,7 +61,9 @@ window.SHEET = {
     {
       id: "audio", name: "Audio", unit: "price per generation",
       rows: [
-        { model: "ElevenLabs v3", price: "$0.12", secs: 15, best: "Expressive voiceover and character dialogue (tags for emotion and delivery)" },
+        { model: "Eleven v4", price: "$0.05", secs: 10, best: "Expressive voiceover and character dialogue in 90 languages; voice cloning from 10s of audio. #1 on the Artificial Analysis speech board" },
+        { model: "Eleven v4 Turbo", price: "$0.02", secs: 5, best: "Faster, cheaper voiceover when you're iterating" },
+        { model: "ElevenLabs v3", tag: "Older", price: "$0.12", secs: 15, best: "Superseded by Eleven v4, which is cheaper and faster", not: "Use v4 instead" },
         { model: "Gemini 3.1 Flash TTS", tag: "Preview", price: "$0.01", secs: 10, best: "Clean narration at a tenth of the price; outranks ElevenLabs on the latest speech leaderboard" },
         { model: "ElevenLabs Music v1", price: "$0.36", secs: 30, best: "Background tracks inside FLORA", not: "Stronger outside FLORA: Suno v6; Eleven Music v2 for commercial clearance" },
         { model: "ElevenLabs Sound Effects", price: "$0.14", secs: 15, best: "Sound effects, ambiences, loops" },
