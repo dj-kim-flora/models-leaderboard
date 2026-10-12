@@ -9,7 +9,7 @@
 // ============================================================
 window.SHEET = {
   title: "Model Shortlist",
-  updated: "Oct 5, 2026",
+  updated: "Oct 12, 2026",
 
   picks: [
     { k: "Text",  m: "Claude Opus 5",       w: "Prompts, shot lists, ideas" },
@@ -38,7 +38,8 @@ window.SHEET = {
       rows: [
         { model: "GPT Image 2.5 Flare", price: "$0.06", secs: 25, refs: "16 images", best: "Best all-rounder. Precise edits that leave the rest of the image alone, transparent backgrounds", not: "Watch for subjects that look pasted in" },
         { model: "GPT Image 2.5 Sunburst", price: "$0.06", secs: 35, refs: "16 images", best: "Final renders and the hardest edits" },
-        { model: "Nano Banana 2", price: "$0.07", secs: 65, refs: "14 images", best: "Combining references (character + product + background) and consistent series at volume" },
+        { model: "Nano Banana 2.1", price: "$0.04", secs: 40, refs: "14 images (4 characters + 10 objects)", best: "The new start-here tier: combining references, targeted local edits, consistent faces and outfits across edit rounds, better text. Cheaper and faster than Nano Banana 2" },
+        { model: "Nano Banana 2", tag: "Older", price: "$0.07", secs: 65, refs: "14 images", best: "Combining references (character + product + background) and consistent series at volume", not: "Superseded by Nano Banana 2.1; use that instead" },
         { model: "Nano Banana Pro", price: "$0.18", secs: 80, refs: "14 images", best: "Dense text, infographics and complex layouts. Holds up to 5 faces consistent in one image" },
         { model: "Nano Banana 2 Lite", price: "$0.04", secs: 10, refs: "Not documented", best: "Cheapest fast drafts", not: "1K resolution max" },
         { model: "Reve 2.1", price: "$0.32", secs: 30, refs: "8 images", best: "Text, typography and layouts; native 4K", not: "Weaker on faces and hands" },
