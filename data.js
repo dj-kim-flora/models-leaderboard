@@ -9,7 +9,7 @@
 // ============================================================
 window.SHEET = {
   title: "Model Shortlist",
-  updated: "Oct 12, 2026",
+  updated: "Oct 19, 2026",
 
   picks: [
     { k: "Text",  m: "Claude Opus 5",       w: "Prompts, shot lists, ideas" },
@@ -26,6 +26,8 @@ window.SHEET = {
         { model: "Claude Opus 5", price: "<$0.01", secs: 25, best: "Writing and expanding prompts, shot lists, creative ideation and copy" },
         { model: "GPT-6 Astra", price: "$0.06", secs: 30, best: "Reading images precisely: small details, text in images, turning a reference into a prompt", not: "Not for video: images and text only" },
         { model: "GPT-6.1 Sol", price: "$0.01", secs: 20, best: "Agentic coding and computer use; near GPT-6 Astra quality at a fraction of the cost" },
+        { model: "Claude Haiku 5.5", price: "<$0.01", secs: 8, best: "Cheapest text row: bulk rewrites, captions, prompt variations, plus image and video understanding" },
+        { model: "Gemini 4 Argon", price: "$0.02", secs: 8, best: "Google's new frontier model, fast for its class", not: "Intro API pricing doubles on Dec 1; re-check the price then" },
         { model: "Gemini Flash 3.8", price: "$0.04", secs: 6, best: "Analyzing video and audio (it watches and listens directly). Fast all-rounder" },
         { model: "Gemini 3.5 Flash-Lite", price: "<$0.01", secs: 4, best: "Bulk jobs: quick rewrites, captions, prompt variations" },
         { model: "Claude Fable 5.1", tag: "Premium", price: "$0.72", secs: 25, best: "Best raw writing and deepest image critique. Use when Opus 5 isn't enough" },
@@ -38,7 +40,7 @@ window.SHEET = {
       rows: [
         { model: "GPT Image 2.5 Flare", price: "$0.06", secs: 25, refs: "16 images", best: "Best all-rounder. Precise edits that leave the rest of the image alone, transparent backgrounds", not: "Watch for subjects that look pasted in" },
         { model: "GPT Image 2.5 Sunburst", price: "$0.06", secs: 35, refs: "16 images", best: "Final renders and the hardest edits" },
-        { model: "Nano Banana 2.1", price: "$0.04", secs: 40, refs: "14 images (4 characters + 10 objects)", best: "The new start-here tier: combining references, targeted local edits, consistent faces and outfits across edit rounds, better text. Cheaper and faster than Nano Banana 2" },
+        { model: "Nano Banana 2.1", price: "$0.05", secs: 40, refs: "14 images (4 characters + 10 objects)", best: "The new start-here tier: combining references, targeted local edits, consistent faces and outfits across edit rounds, better text. Cheaper and faster than Nano Banana 2" },
         { model: "Nano Banana 2", tag: "Older", price: "$0.07", secs: 65, refs: "14 images", best: "Combining references (character + product + background) and consistent series at volume", not: "Superseded by Nano Banana 2.1; use that instead" },
         { model: "Nano Banana Pro", price: "$0.18", secs: 80, refs: "14 images", best: "Dense text, infographics and complex layouts. Holds up to 5 faces consistent in one image" },
         { model: "Nano Banana 2 Lite", price: "$0.04", secs: 10, refs: "Not documented", best: "Cheapest fast drafts", not: "1K resolution max" },
