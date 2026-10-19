@@ -12,7 +12,7 @@ window.SHEET = {
   updated: "Oct 19, 2026",
 
   picks: [
-    { k: "Text",  m: "Claude Opus 5",       w: "Prompts, shot lists, ideas" },
+    { k: "Text",  m: "Claude Opus 5.5",     w: "Prompts, shot lists, ideas" },
     { k: "Image", m: "GPT Image 2.5 Flare", w: "Best all-rounder" },
     { k: "Video", m: "Seedance 2.0",        w: "Cinematic motion" },
     { k: "Audio", m: "Eleven v4",           w: "Voiceover with emotion" },
@@ -23,25 +23,27 @@ window.SHEET = {
     {
       id: "text", name: "Text", unit: "price per run",
       rows: [
-        { model: "Claude Opus 5", price: "<$0.01", secs: 25, best: "Writing and expanding prompts, shot lists, creative ideation and copy" },
+        { model: "Claude Opus 5.5", price: "$0.01", secs: 25, best: "New Anthropic flagship. Adjustable thinking (Low/Med/High); benchmarks at or above Fable 5.1 for a fraction of the cost", not: "Costs more per run than Opus 5 ($0.0135 vs $0.009) even though its per-token price is lower, since adaptive thinking is always on" },
+        { model: "Claude Opus 5", price: "<$0.01", secs: 25, best: "Writing and expanding prompts, shot lists, creative ideation and copy", not: "Cheaper than Opus 5.5; use that instead if budget allows" },
         { model: "GPT-6 Astra", price: "$0.06", secs: 30, best: "Reading images precisely: small details, text in images, turning a reference into a prompt", not: "Not for video: images and text only" },
         { model: "GPT-6.1 Sol", price: "$0.01", secs: 20, best: "Agentic coding and computer use; near GPT-6 Astra quality at a fraction of the cost" },
         { model: "Claude Haiku 5.5", price: "<$0.01", secs: 8, best: "Cheapest text row: bulk rewrites, captions, prompt variations, plus image and video understanding" },
         { model: "Gemini 4 Argon", price: "$0.02", secs: 8, best: "Google's new frontier model, fast for its class", not: "Intro API pricing doubles on Dec 1; re-check the price then" },
         { model: "Gemini Flash 3.8", price: "$0.04", secs: 6, best: "Analyzing video and audio (it watches and listens directly). Fast all-rounder" },
         { model: "Gemini 3.5 Flash-Lite", price: "<$0.01", secs: 4, best: "Bulk jobs: quick rewrites, captions, prompt variations" },
-        { model: "Claude Fable 5.1", tag: "Premium", price: "$0.72", secs: 25, best: "Best raw writing and deepest image critique. Use when Opus 5 isn't enough" },
+        { model: "Claude Fable 5.1", tag: "Premium", price: "$0.72", secs: 25, best: "Best raw writing and deepest image critique. Use when Opus 5.5 isn't enough", not: "~53x Opus 5.5's per-run cost for no measured benchmark advantage; confirm you need it before running" },
         { model: "ElevenLabs Scribe v2", tag: "Audio to text", price: "<$0.01", secs: 10, best: "Transcripts with timestamps and speaker labels" },
       ],
     },
     {
       id: "image", name: "Image", unit: "price per image",
-      note: "Reference counts are the provider's documented maximums. FLORA may cap them lower on the node.",
+      note: "Reference counts are the provider's documented maximums. FLORA may cap them lower on the node. Price shows the full span across a model's modes (generate vs. edit, quality tiers) when FLORA charges them differently — not just the cheapest one.",
       rows: [
-        { model: "GPT Image 2.5 Flare", price: "$0.06", secs: 25, refs: "16 images", best: "Best all-rounder. Precise edits that leave the rest of the image alone, transparent backgrounds", not: "Watch for subjects that look pasted in" },
-        { model: "GPT Image 2.5 Sunburst", price: "$0.06", secs: 35, refs: "16 images", best: "Final renders and the hardest edits" },
+        { model: "GPT Image 2.5 Flare", price: "$0.055–$0.064", priceNote: "t2i → i2i/is2i", secs: 25, refs: "16 images", best: "Best all-rounder. Precise edits that leave the rest of the image alone, transparent backgrounds", not: "Watch for subjects that look pasted in" },
+        { model: "GPT Image 2.5 Sunburst", price: "$0.055–$0.064", priceNote: "t2i → i2i/is2i", secs: 35, refs: "16 images", best: "Final renders and the hardest edits. #1 on Artificial Analysis's independent image-editing arena" },
+        { model: "Ideogram 4.5 Precise Edit", price: "$0.072", priceNote: "i2i/is2i only, no t2i. FLORA's Quality dial (Very Low→High) also moves the price — this is the Medium default", secs: 30, refs: "1+ images (built for multi-turn edits)", best: "Surgical fixes: garbled text, typos, swap one small detail, without regenerating the rest. Native edit resolution up to 24MP, vendor claims it holds up across repeated edit rounds", not: "Not the overall edit leader: ranks #23 on Artificial Analysis's editing arena (1,064 Elo) vs Sunburst's #1 (1,182) and Flare's #2 (1,162), a gap outside the error bars. Its case is precision and price on small fixes, not raw edit quality — don't demo it as \"better than GPT Image\" without qualifying that" },
         { model: "Nano Banana 2.1", price: "$0.05", secs: 40, refs: "14 images (4 characters + 10 objects)", best: "The new start-here tier: combining references, targeted local edits, consistent faces and outfits across edit rounds, better text. Cheaper and faster than Nano Banana 2" },
-        { model: "Nano Banana 2", tag: "Older", price: "$0.07", secs: 65, refs: "14 images", best: "Combining references (character + product + background) and consistent series at volume", not: "Superseded by Nano Banana 2.1; use that instead" },
+        { model: "Nano Banana 2", tag: "Older", price: "$0.072–$0.08", priceNote: "Same model, two FLORA routes (enhancor vs. Gemini direct) at different cost", secs: 65, refs: "14 images", best: "Combining references (character + product + background) and consistent series at volume", not: "Superseded by Nano Banana 2.1; use that instead" },
         { model: "Nano Banana Pro", price: "$0.18", secs: 80, refs: "14 images", best: "Dense text, infographics and complex layouts. Holds up to 5 faces consistent in one image" },
         { model: "Nano Banana 2 Lite", price: "$0.04", secs: 10, refs: "Not documented", best: "Cheapest fast drafts", not: "1K resolution max" },
         { model: "Reve 2.1", tag: "Dead", price: "$0.32", secs: 30, refs: "8 images", best: "Text, typography and layouts; native 4K", not: "Service shut down Sep 27 2026. FLORA hasn't pulled the listing yet, but this will fail or hang if you run it. Don't demo." },
@@ -109,5 +111,7 @@ window.SHEET = {
     { label: "Meshy 7.1: text-to-3D, neural geometry reconstruction", url: "https://www.pixazo.ai/blog/?p=2772014" },
     { label: "Tripo P2.0: native quad mesh, production-ready assets", url: "https://www.3daistudio.com/blog/introducing-tripo-p2" },
     { label: "Lyria 3.5 launch (Google Flow Music)", url: "https://blog.google/innovation-and-ai/models-and-research/google-labs/lyria-3-5/" },
+    { label: "Artificial Analysis image editing arena: Ideogram 4.5 ranks #23, GPT Image 2.5 Sunburst #1 / Flare #2", url: "https://www.orcarouter.ai/blog/ideogram-4-5-vs-gpt-image-2-5" },
+    { label: "Ideogram 4.5 editing tools, hands-on (text fixes, character consistency)", url: "https://www.mindstudio.ai/blog/ideogram-4-5-editing" },
   ],
 };
