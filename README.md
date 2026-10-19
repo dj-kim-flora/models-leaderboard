@@ -26,3 +26,7 @@ If the page shows a red "data.js failed to load" box, the last edit has a typo (
 ## Preview locally
 
 Double-click `index.html`. It works offline because the data loads as a script, not a fetch.
+
+## History
+
+Build and weekly-update record: [docs/model-shortlist-site-build-and-weekly-updates.md](docs/model-shortlist-site-build-and-weekly-updates.md)
